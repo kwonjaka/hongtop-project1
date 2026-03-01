@@ -191,3 +191,72 @@ body.dark-mode #all-sets-container {
         margin-right: 0;
     }
 }
+
+.contact-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.contact-section hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.contact-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#submit-btn {
+    width: 100%;
+    background: var(--text-color);
+    color: var(--container-bg);
+    border: none;
+    padding: 14px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
+}
+
+body.dark-mode #submit-btn {
+    background: #e0e0e0;
+    color: #121212;
+}
