@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 동물상 테스트 - 나는 강아지상? 고양이상?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-actions">
+            <button id="theme-toggle">다크 모드</button>
+            <a href="index.html" id="lang-toggle">메뉴 추천으로</a>
+        </div>
+        <h1>AI 동물상 테스트</h1>
+        <p class="subtitle">AI가 분석하는 나의 숨겨진 동물상 찾기</p>
+        
+        <div id="test-container">
+            <div id="webcam-wrapper">
+                <div id="webcam-container"></div>
+                <div id="loading-overlay" class="hidden">
+                    <div class="loader"></div>
+                    <p>AI 모델 로딩 중...</p>
+                </div>
+            </div>
+            
+            <div id="result-container" class="hidden">
+                <h3>분석 결과</h3>
+                <div id="label-container"></div>
+            </div>
+
+            <div class="footer-actions">
+                <button id="start-btn" onclick="init()">테스트 시작하기 (웹캠)</button>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <hr>
+            <h3>제휴 및 문의</h3>
+            <form action="https://formspree.io/f/xojnzjrw" method="POST" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="성함/기업명" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="이메일 주소" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="문의 내용을 입력해주세요" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">문의 보내기</button>
+            </form>
+        </div>
+    </div>
+    <script src="animal-test.js"></script>
+</body>
+</html>

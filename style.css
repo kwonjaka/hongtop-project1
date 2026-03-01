@@ -48,7 +48,7 @@ body {
     margin-bottom: 10px;
 }
 
-#lang-toggle {
+#lang-toggle, .header-link {
     text-decoration: none;
     color: var(--text-color);
     font-size: 0.85em;
@@ -59,7 +59,7 @@ body {
     transition: all 0.2s;
 }
 
-#lang-toggle:hover {
+#lang-toggle:hover, .header-link:hover {
     filter: brightness(0.9);
 }
 
@@ -256,7 +256,101 @@ body.dark-mode #all-sets-container {
     opacity: 0.9;
 }
 
-body.dark-mode #submit-btn {
-    background: #e0e0e0;
-    color: #121212;
+/* Animal Test Styles */
+#test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#webcam-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+#webcam-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+}
+
+#loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none !important;
+}
+
+#result-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.prediction-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.label-name {
+    width: 60px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: right;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 15px;
+    background-color: var(--circle-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent-color);
+    transition: width 0.2s;
+}
+
+.percentage {
+    width: 40px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--accent-color);
 }
